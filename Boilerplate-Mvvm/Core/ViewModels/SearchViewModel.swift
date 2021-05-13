@@ -11,17 +11,27 @@ import RxCocoa
 
 class SearchViewModel: BaseViewModel {
     
-    let ListProduct = BehaviorRelay<[ProductPromo]>(value: [ProductPromo]())
+    var ListProduct = BehaviorRelay<[ProductPromo]>(value: [ProductPromo]())
+    
+    
+    private var repo: ISearchRepository
+    init(repo : ISearchRepository) {
+        self.repo = repo
+    }
     
     func getMockData() {
-//        Observable<ProductPromo>.create { (observer) -> Disposable in
-////            observer.onNext(ProductPromo(from: <#Decoder#>))
-//            observer.onCompleted()
-//            return Disposables.create()
-//        }
-        
-//        ListProduct.accept(<#T##event: [ProductPromo]##[ProductPromo]#>)
-        
+        repo.getMockData()
+            .observe(on: MainScheduler.instance)
+            .subscribe(onSuccess: { (value) in
+                self.ListProduct.accept(value)
+            }, onFailure: { (error) in
+                print(error.localizedDescription)
+//                self.alertError.onNext(error.localizedDescription)
+            })
+    }
+    func clearData() {
+        var empty = [ProductPromo]()
+        ListProduct.accept(empty)
     }
     
 }

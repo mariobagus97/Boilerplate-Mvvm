@@ -7,23 +7,73 @@
 
 import Foundation
 import RxSwift
-
+import RealmSwift
 protocol IHomeRepository {
     func GetHomeItem() -> Single<([Category], [ProductPromo])>
 }
 
 class HomeRepository: IHomeRepository  {
-    
+    let realm = try! Realm()
     private let homeService : HomeService
     init(homeService : HomeService) {
         self.homeService = homeService
     }
+    var allProduct : AllProduct!
+    var isUpdate = false
     
     func GetHomeItem() -> Single<([Category], [ProductPromo])> {
-        let products =  homeService.GetHeroes().map { (response) -> ([Category], [ProductPromo]) in
+        
+        let item = realm.objects(AllProduct.self).first
+        if let item = item {
+            allProduct = item
+            isUpdate = true
+        } else {
+            allProduct = AllProduct()
+            isUpdate = false
+        }
+        
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        let listMockProduct = List<Product>()//allProduct.mockProduct
+        
+        let products =  homeService.GetHeroes().map { [self] (response) -> ([Category], [ProductPromo]) in
+            for item in response[0].data.productPromo{
+                let mock = Product()
+                mock.id = item.id
+                mock.imageURL = item.imageURL
+                mock.title = item.title
+                mock.productPromoDescription = item.productPromoDescription
+                mock.price = item.price
+                mock.loved = item.loved
+                listMockProduct.append(mock)
+            }
+            
+            if isUpdate {
+                try! realm.write {
+                    allProduct.mockProduct = listMockProduct
+                }
+            } else {
+            allProduct.mockProduct = listMockProduct
+            realm.beginWrite()
+            realm.add(allProduct)
+            try! realm.commitWrite()
+            }
             return (response[0].data.category , response[0].data.productPromo)
         }
         return products
     }
-   
+}
+
+
+class AllProduct: Object {
+    var mockProduct = List<Product>()
+    var productPurchase = List<Product>()
+}
+
+class Product : Object {
+    @objc dynamic var id: String = ""
+    @objc dynamic var imageURL: String = ""
+    @objc dynamic var title : String = ""
+    @objc dynamic var productPromoDescription : String = ""
+    @objc dynamic var price: String = ""
+    @objc dynamic var loved: Int = 0
 }

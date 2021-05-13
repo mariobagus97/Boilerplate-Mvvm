@@ -13,6 +13,9 @@
 		ED453358264B14980073C61B /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED453351264B14980073C61B /* Container.swift */; };
 		ED453359264B14980073C61B /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED453352264B14980073C61B /* URLBuilder.swift */; };
 		ED453377264B15CB0073C61B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED453376264B15CB0073C61B /* LoginViewModel.swift */; };
+		ED7FA39A264DAE2200E8CDC4 /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7FA399264DAE2200E8CDC4 /* SearchRepository.swift */; };
+		ED7FA3A1264DB51A00E8CDC4 /* ProductItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7FA39F264DB51A00E8CDC4 /* ProductItemCell.swift */; };
+		ED7FA3A2264DB51A00E8CDC4 /* ProductItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED7FA3A0264DB51A00E8CDC4 /* ProductItemCell.xib */; };
 		ED9EF995264B10040024D7B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9EF994264B10040024D7B6 /* AppDelegate.swift */; };
 		ED9EF997264B10040024D7B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9EF996264B10040024D7B6 /* SceneDelegate.swift */; };
 		ED9EF99E264B10040024D7B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED9EF99D264B10040024D7B6 /* Assets.xcassets */; };
@@ -36,13 +39,9 @@
 		EDCB37EF264BFC2100E6A468 /* ProductDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB37EE264BFC2100E6A468 /* ProductDetailViewModel.swift */; };
 		EDCB37F3264C7B2400E6A468 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB37F1264C7B2400E6A468 /* SearchViewController.swift */; };
 		EDCB37F4264C7B2400E6A468 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDCB37F2264C7B2400E6A468 /* SearchViewController.xib */; };
-		EDCB37F9264C7C1500E6A468 /* SearchProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB37F7264C7C1500E6A468 /* SearchProductCell.swift */; };
-		EDCB37FA264C7C1500E6A468 /* SearchProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDCB37F8264C7C1500E6A468 /* SearchProductCell.xib */; };
 		EDCB37FF264C871900E6A468 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB37FE264C871900E6A468 /* SearchViewModel.swift */; };
 		EDCB3803264CBB8F00E6A468 /* PurchaseHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB3801264CBB8F00E6A468 /* PurchaseHistoryViewController.swift */; };
 		EDCB3804264CBB8F00E6A468 /* PurchaseHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDCB3802264CBB8F00E6A468 /* PurchaseHistoryViewController.xib */; };
-		EDCB3809264CBBBF00E6A468 /* PurchaseHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB3807264CBBBF00E6A468 /* PurchaseHistoryCell.swift */; };
-		EDCB380A264CBBBF00E6A468 /* PurchaseHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDCB3808264CBBBF00E6A468 /* PurchaseHistoryCell.xib */; };
 		EDCB380E264CC35400E6A468 /* PurchaseHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB380D264CC35400E6A468 /* PurchaseHistoryViewModel.swift */; };
 		EDCB3855264CD5BF00E6A468 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB3853264CD5BF00E6A468 /* RootViewController.swift */; };
 		EDCB3856264CD5BF00E6A468 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDCB3854264CD5BF00E6A468 /* RootViewController.xib */; };
@@ -56,6 +55,9 @@
 		ED453351264B14980073C61B /* Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		ED453352264B14980073C61B /* URLBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
 		ED453376264B15CB0073C61B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		ED7FA399264DAE2200E8CDC4 /* SearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepository.swift; sourceTree = "<group>"; };
+		ED7FA39F264DB51A00E8CDC4 /* ProductItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemCell.swift; sourceTree = "<group>"; };
+		ED7FA3A0264DB51A00E8CDC4 /* ProductItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductItemCell.xib; sourceTree = "<group>"; };
 		ED9EF991264B10040024D7B6 /* Boilerplate-Mvvm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Boilerplate-Mvvm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED9EF994264B10040024D7B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED9EF996264B10040024D7B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,13 +83,9 @@
 		EDCB37EE264BFC2100E6A468 /* ProductDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewModel.swift; sourceTree = "<group>"; };
 		EDCB37F1264C7B2400E6A468 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		EDCB37F2264C7B2400E6A468 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
-		EDCB37F7264C7C1500E6A468 /* SearchProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProductCell.swift; sourceTree = "<group>"; };
-		EDCB37F8264C7C1500E6A468 /* SearchProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchProductCell.xib; sourceTree = "<group>"; };
 		EDCB37FE264C871900E6A468 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		EDCB3801264CBB8F00E6A468 /* PurchaseHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseHistoryViewController.swift; sourceTree = "<group>"; };
 		EDCB3802264CBB8F00E6A468 /* PurchaseHistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PurchaseHistoryViewController.xib; sourceTree = "<group>"; };
-		EDCB3807264CBBBF00E6A468 /* PurchaseHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseHistoryCell.swift; sourceTree = "<group>"; };
-		EDCB3808264CBBBF00E6A468 /* PurchaseHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PurchaseHistoryCell.xib; sourceTree = "<group>"; };
 		EDCB380D264CC35400E6A468 /* PurchaseHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseHistoryViewModel.swift; sourceTree = "<group>"; };
 		EDCB3853264CD5BF00E6A468 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		EDCB3854264CD5BF00E6A468 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
@@ -166,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				EDCB37C6264BBF0D00E6A468 /* HomeRepository.swift */,
+				ED7FA399264DAE2200E8CDC4 /* SearchRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -195,6 +194,15 @@
 				EDCB3754264B20AC00E6A468 /* LoginViewController.xib */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		ED7FA39E264DB4C600E8CDC4 /* ProductItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				ED7FA39F264DB51A00E8CDC4 /* ProductItemCell.swift */,
+				ED7FA3A0264DB51A00E8CDC4 /* ProductItemCell.xib */,
+			);
+			path = ProductItemCell;
 			sourceTree = "<group>";
 		};
 		ED9EF988264B10040024D7B6 = {
@@ -286,7 +294,7 @@
 		EDCB37E5264BDE2A00E6A468 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				EDCB37F6264C7BCE00E6A468 /* SearchProductCell */,
+				ED7FA39E264DB4C600E8CDC4 /* ProductItemCell */,
 				EDCB37F1264C7B2400E6A468 /* SearchViewController.swift */,
 				EDCB37F2264C7B2400E6A468 /* SearchViewController.xib */,
 			);
@@ -305,29 +313,10 @@
 		EDCB37E7264BDE4400E6A468 /* PurchaseHistory */ = {
 			isa = PBXGroup;
 			children = (
-				EDCB3806264CBB9900E6A468 /* Cell */,
 				EDCB3801264CBB8F00E6A468 /* PurchaseHistoryViewController.swift */,
 				EDCB3802264CBB8F00E6A468 /* PurchaseHistoryViewController.xib */,
 			);
 			path = PurchaseHistory;
-			sourceTree = "<group>";
-		};
-		EDCB37F6264C7BCE00E6A468 /* SearchProductCell */ = {
-			isa = PBXGroup;
-			children = (
-				EDCB37F7264C7C1500E6A468 /* SearchProductCell.swift */,
-				EDCB37F8264C7C1500E6A468 /* SearchProductCell.xib */,
-			);
-			path = SearchProductCell;
-			sourceTree = "<group>";
-		};
-		EDCB3806264CBB9900E6A468 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				EDCB3807264CBBBF00E6A468 /* PurchaseHistoryCell.swift */,
-				EDCB3808264CBBBF00E6A468 /* PurchaseHistoryCell.xib */,
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 		EDCB384E264CD13700E6A468 /* Root */ = {
@@ -399,13 +388,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED7FA3A2264DB51A00E8CDC4 /* ProductItemCell.xib in Resources */,
 				ED9EF9A1264B10040024D7B6 /* LaunchScreen.storyboard in Resources */,
 				EDCB37B3264BB45300E6A468 /* CategoryCell.xib in Resources */,
 				EDCB37BE264BB4A100E6A468 /* ProductCell.xib in Resources */,
-				EDCB37FA264C7C1500E6A468 /* SearchProductCell.xib in Resources */,
 				EDCB3856264CD5BF00E6A468 /* RootViewController.xib in Resources */,
 				EDCB37EC264BEA4300E6A468 /* ProductDetailViewController.xib in Resources */,
-				EDCB380A264CBBBF00E6A468 /* PurchaseHistoryCell.xib in Resources */,
 				EDCB378C264B4F5E00E6A468 /* client_975373782332-nk4vef89g58a4q8qjbsdda2m7m0fgn5t.apps.googleusercontent.com.plist in Resources */,
 				EDCB37F4264C7B2400E6A468 /* SearchViewController.xib in Resources */,
 				ED9EF99E264B10040024D7B6 /* Assets.xcassets in Resources */,
@@ -487,11 +475,11 @@
 				ED453359264B14980073C61B /* URLBuilder.swift in Sources */,
 				EDCB37C1264BBC5600E6A468 /* HomeResponse.swift in Sources */,
 				EDCB37F3264C7B2400E6A468 /* SearchViewController.swift in Sources */,
+				ED7FA3A1264DB51A00E8CDC4 /* ProductItemCell.swift in Sources */,
 				ED9EF997264B10040024D7B6 /* SceneDelegate.swift in Sources */,
 				EDCB378F264BADF000E6A468 /* HomeViewModel.swift in Sources */,
 				ED453377264B15CB0073C61B /* LoginViewModel.swift in Sources */,
 				EDCB3755264B20AC00E6A468 /* LoginViewController.swift in Sources */,
-				EDCB37F9264C7C1500E6A468 /* SearchProductCell.swift in Sources */,
 				EDCB375B264B31D700E6A468 /* HomeViewController.swift in Sources */,
 				ED453338264B13EE0073C61B /* BaseViewController.swift in Sources */,
 				EDCB37EB264BEA4300E6A468 /* ProductDetailViewController.swift in Sources */,
@@ -499,7 +487,7 @@
 				EDCB3855264CD5BF00E6A468 /* RootViewController.swift in Sources */,
 				EDCB37E3264BC75000E6A468 /* Extensions.swift in Sources */,
 				EDCB37FF264C871900E6A468 /* SearchViewModel.swift in Sources */,
-				EDCB3809264CBBBF00E6A468 /* PurchaseHistoryCell.swift in Sources */,
+				ED7FA39A264DAE2200E8CDC4 /* SearchRepository.swift in Sources */,
 				ED453343264B14320073C61B /* BaseViewModel.swift in Sources */,
 				EDCB37BD264BB4A100E6A468 /* ProductCell.swift in Sources */,
 				ED453358264B14980073C61B /* Container.swift in Sources */,

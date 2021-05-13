@@ -17,6 +17,7 @@ class Container {
         self.registerServices()
         self.registerRepositories()
         container.autoregister(HomeViewModel.self, initializer: HomeViewModel.init)
+        container.autoregister(SearchViewModel.self, initializer: SearchViewModel.init)
     }
     
     
@@ -37,8 +38,10 @@ class Container {
         return container.resolve(type)
     }
 
+    
     func registerRepositories() {
         container.autoregister(IHomeRepository.self, initializer: HomeRepository.init)
+        container.autoregister(ISearchRepository.self, initializer: SearchRepository.init)
     }
 
     func registerServices() {

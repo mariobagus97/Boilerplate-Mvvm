@@ -9,6 +9,8 @@ import UIKit
 
 class PurchaseHistoryViewController: BaseViewController<PurchaseHistoryViewModel> {
 
+    @IBOutlet weak var navItem: UINavigationItem!
+    @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var purchaseHistoryTableView: UITableView!
     
     override func viewDidLoad() {
@@ -23,7 +25,7 @@ class PurchaseHistoryViewController: BaseViewController<PurchaseHistoryViewModel
             }
             .disposed(by: disposeBag)
 
-        viewModel.ListProduct.bind(to: purchaseHistoryTableView.rx.items(cellIdentifier: "cellId", cellType: PurchaseHistoryCell.self)) { (row,item,cell) in
+        viewModel.ListProduct.bind(to: purchaseHistoryTableView.rx.items(cellIdentifier: "cellId", cellType: ProductItemCell.self)) { (row,item,cell) in
             cell.lblName.text = item.title
             cell.imgProduct.loadImage(fromURL: item.imageURL)
             cell.lblPrice.text = item.price
@@ -41,22 +43,22 @@ class PurchaseHistoryViewController: BaseViewController<PurchaseHistoryViewModel
     
     func setupTableView() {
         purchaseHistoryTableView.rowHeight = UITableView.automaticDimension
-        purchaseHistoryTableView.register(UINib(nibName: "PurchaseHistoryCell", bundle: nil), forCellReuseIdentifier: "cellId")
-        purchaseHistoryTableView.reloadData()
+        purchaseHistoryTableView.register(UINib(nibName: "ProductItemCell", bundle: nil), forCellReuseIdentifier: "cellId")
+        purchaseHistoryTableView.reloadData()   
     }
     
     func setupNavigationBar(){
+        self.navItem.title = "Purchase History"
         
-        self.navigationItem.title = "Purchase History"
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "icBack")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(backTapped))
+        self.navItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "icBack")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(backTapped))
         
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.view.backgroundColor = .clear
+        self.navBar.setBackgroundImage(UIImage(), for: .default)
+        self.navBar.shadowImage = UIImage()
+        self.navBar.isTranslucent = true
+//        self.navigationController?.view.backgroundColor = .blue
     }
     
     @objc func backTapped(){
-        navigationController?.popViewController(animated: false)
+        dismiss(animated: false, completion: nil)
     }
 }

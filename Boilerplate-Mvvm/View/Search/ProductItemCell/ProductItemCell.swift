@@ -1,13 +1,13 @@
 //
-//  PurchaseHistoryCell.swift
+//  ProductItemCell.swift
 //  Boilerplate-Mvvm
 //
-//  Created by Muhammad Ario Bagus on 13/05/21.
+//  Created by Muhammad Ario Bagus on 14/05/21.
 //
 
 import UIKit
 
-class PurchaseHistoryCell: UITableViewCell {
+class ProductItemCell: UITableViewCell {
 
     @IBOutlet weak var imgProduct: UIImageView!
     @IBOutlet weak var lblName: UILabel!
@@ -20,6 +20,8 @@ class PurchaseHistoryCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+
         // Configure the view for the selected state
     }
+    
 }

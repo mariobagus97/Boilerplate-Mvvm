@@ -18,6 +18,21 @@ class SearchViewController: BaseViewController<SearchViewModel> {
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.becomeFirstResponder()
+        setupTableView()
+        productTableView.keyboardDismissMode = .onDrag
+        
+        viewModel.ListProduct.bind(to: productTableView.rx.items(cellIdentifier: "cellId", cellType: ProductItemCell.self)) { (row,item,cell) in
+            cell.lblName.text = item.title
+            cell.imgProduct.loadImage(fromURL: item.imageURL)
+            cell.lblPrice.text = item.price
+        }
+            .disposed(by: disposeBag)
+    }
+    
+    func setupTableView() {
+        productTableView.rowHeight = UITableView.automaticDimension
+        productTableView.register(UINib(nibName: "ProductItemCell", bundle: nil), forCellReuseIdentifier: "cellId")
+        productTableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,10 +54,16 @@ class SearchViewController: BaseViewController<SearchViewModel> {
     @objc func backTapped(){
         self.navigationController?.popViewController(animated: false)
     }
+    
 }
 
 extension SearchViewController : UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
+        if searchText.isEmpty{
+            viewModel.clearData()
+        } else {
+            viewModel.getMockData()
+        }
     }
 }
+

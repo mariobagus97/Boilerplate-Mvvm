@@ -15,7 +15,7 @@ pod 'RxSwift'
 pod 'RxCocoa'
 pod 'Swinject'
 pod 'SwinjectAutoregistration'
-pod 'Firebase'
+pod 'RealmSwift'
 
  # login library
     pod 'FBSDKLoginKit'
